@@ -5,26 +5,26 @@ public abstract class MyFurniture {
     private String type;
     final java.util.Date datePurchased;
     private int numOfType;
-   // private final Purchaser[] furnitureList;
+    private final Purchaser[] furnitureList;
 
     /** Construct a default furniture object */
 
     protected MyFurniture(){
         datePurchased = new java.util.Date();
-    //   furnitureList = new Purchaser[5];
+        furnitureList = new Purchaser[5];
 
     }
    /** Construct a furniture object with the specified type and choice
    * @return
    * @param type
    * @param c
-   * @param // numOfType
+   * @param  numOfType
    */
 
    protected MyFurniture(String type, String c){
        datePurchased = new java.util.Date();
        this.type = type;
-    //   furnitureList = new Purchaser[5];
+       furnitureList = new Purchaser[5];
    }
   /**Return type
    * @return */
@@ -49,6 +49,22 @@ public abstract class MyFurniture {
     public String toString(){
         return "Purchased on "+datePurchased;
     }
+
+    /** Showing association
+     @param p1 */
+    public void addFurnitureList(Purchaser p1){
+        furnitureList[numOfType]=p1;
+        numOfType++;
+    }
+    public void printAllInfo(){
+        for(int i=0; i<numOfType; i++){
+            Purchaser s = (Purchaser)furnitureList[i];
+            System.out.println((i+1) + ". " + s.getFurnitureType() );
+        }
+    }
+
+    /** Abstract method getDiscount */
+    public abstract double getDiscount();
 
 
 
