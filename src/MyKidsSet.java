@@ -77,4 +77,8 @@ public abstract class MyKidsSet {
         System.out.println("\nYou have choose : " + selection);
     }
 
+    /**Has Implementations Using Interface*/
+    public abstract int compareTo(ComparableKidsSet o);
+
+
 }
