@@ -1,8 +1,8 @@
 public class Membership {
 
-    String nName;
-    String nBirth;
-    double nFee;
+    private String nName;
+    private String nBirth;
+    private double nFee;
 
     public Membership(String name,String dateOfBirth, double fees){
         this.nName = name;
