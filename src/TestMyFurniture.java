@@ -423,7 +423,7 @@ public class TestMyFurniture {
     //To Add New Membership
     private static Membership input1() {
         Scanner input = new Scanner(System.in);
-        System.out.println("*******************************************");
+        System.out.println("********************** *********************");
         System.out.println("\t\tEnter your details ");
         System.out.println("*******************************************");
         System.out.print("Enter Member name :");
