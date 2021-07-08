@@ -1,28 +1,34 @@
-import java.util.Scanner;
+package project;
 
-public class ComparableKidsSet extends MyKidsSet implements Comparable{
+import project.ComparableKidsSet;
+
+import java.util.Scanner;
+import javax.swing.JOptionPane;
+import javax.swing.JDialog;
+
+public abstract class MyKidsSet {
 
     private String kidsId, furName;
     private double price;
-
-    public ComparableKidsSet(){
+    public MyKidsSet()
+    {
+        kidsId = "";
+        furName = "";
+        price = 0.0;
     }
 
-    public ComparableKidsSet( ComparableKidsSet o1){
-
+    public MyKidsSet(double p) {
+        price = p;
     }
-
-
-    @Override
-    public int compareTo(ComparableKidsSet o) {
-        if(getPrice() > ( (ComparableKidsSet)o).getPrice() ){
-            return 1;
-        }else if (getPrice() < (( ComparableKidsSet)o).getPrice() ){
-            return -1;
-        }else
-            return 0;
+    public MyKidsSet(String newId, String newFurName, double newPrice)
+    {
+        kidsId = newId;
+        furName = newFurName;
+        price = 0.0;
     }
-
+    public double getPrice() {
+        return this.price;
+    }
     public String showPrice()
     {
         Scanner input = new Scanner(System.in);
@@ -61,7 +67,22 @@ public class ComparableKidsSet extends MyKidsSet implements Comparable{
         return kidsId;
     }
 
+    public void mysteryGift()
+    {
+        JDialog.setDefaultLookAndFeelDecorated(true); //using JOptionPane
+        System.out.print("\n");
+        System.out.print("Congrat's. You're entitled to get a mystery gift from us!!!");
+        Object [] selectionValues = {"Little Tayo", "Barbie", "Thomas & Friends",
+                "Roborcar Poli"};
+        String initialSelection = "Key Chain";
+        Object selection = JOptionPane.showInputDialog(null, "Mystery Gift",
+                "Choose Your Gift", JOptionPane.QUESTION_MESSAGE, null,
+                selectionValues, initialSelection);
+        System.out.println("\nYou have choose : " + selection);
+    }
 
+    /**Has Implementations Using Interface*/
+    public abstract int compareTo(ComparableKidsSet o);
 
 
 }

@@ -1,4 +1,4 @@
-package src;
+package project;;
 
     public class Purchaser {
         private final int id;

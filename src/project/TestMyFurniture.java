@@ -1,24 +1,20 @@
-package src;
+package project;
 
 import java.util.ArrayList;
 import java.util.Scanner;
 import java.text.DecimalFormat;
+
 public class TestMyFurniture {
     public static void main(String[] args) {
 
 
         System.out.print("\n///////////////////////////////////////////////////////////");
 
-        System.out.print("\n//Mardiana binti Abu
-                Hassan\tSX140047CSJS04//////////////////");
-                System.out.print("\n//Nur Allyyaa binti Abdul
-                        Halim\tSX140055CSJS04//////////////////");
-                        System.out.print("\n//Nur Syuhadah binti
-                                Zulkifli\tSX1401047SCSV04//////////////////");
-                                System.out.print("\n//Nurul Hidayah binti
-                                        Anuar\tSX140056CSJS04//////////////////");
-                                        System.out.print("\n//Application Name :
-                                                Furniture//////////////////////////////////");
+        System.out.print("\n//Mardiana binti Abu Hassan\tSX140047CSJS04//////////////////");
+                System.out.print("\n//Nur Allyyaa binti Abdul Halim\tSX140055CSJS04//////////////////");
+                        System.out.print("\n//Nur Syuhadah binti Zulkifli\tSX1401047SCSV04//////////////////");
+                                System.out.print("\n//Nurul Hidayah binti Anuar\tSX140056CSJS04//////////////////");
+                                        System.out.print("\n//Application Name : Furniture//////////////////////////////////");
 
                                                 System.out.print("\n///////////////////////////////////////////////////////////");
         System.out.print("\n\n\n");
@@ -95,7 +91,7 @@ public class TestMyFurniture {
 //End Of Furniture Array List
 
         //********************************************************************************
-        //To Display Membership Menu
+        //To Display project.Membership Menu
 //********************************************************************************
 
         ArrayList<Membership> ship = new ArrayList<>();
@@ -107,7 +103,7 @@ public class TestMyFurniture {
             if(userSelection1==1){
 
                 System.out.println("*******************************************");
-                System.out.println("\t\tEnter New Membership Details ");
+                System.out.println("\t\tEnter New project.Membership Details ");
                 System.out.println("*******************************************");
                 Scanner opt = new Scanner(System.in);
                 System.out.print("How many members you want to register today: ");
@@ -164,7 +160,7 @@ public class TestMyFurniture {
             System.out.println("\n");
 
         }
-//End Of Membership Array
+//End Of project.Membership Array
 
 //********************************************************************************
         //To Manage Purchaser Details of Purchased Item
@@ -227,8 +223,7 @@ public class TestMyFurniture {
 
         s2.listOfFurniture();
 
-        //TODO Interface Implementation | To Find Maximum Price between 2 types of
-        kids furniture
+        //TODO Interface Implementation | To Find Maximum Price between 2 types ofkids furniture
         ComparableKidsSet myKids1 = new ComparableKidsSet();
         ComparableKidsSet myKids2 = new ComparableKidsSet();
         myKids1.showPrice();
@@ -242,7 +237,7 @@ public class TestMyFurniture {
         System.out.println(Max.max(kids1, kids2));
 
     }
-    /** A method for comparing the discount of the two MyFurniture Object | Abstract
+    /** A method for comparing the discount of the two project.MyFurniture Object | Abstract
      Class
      *
      * @param object1
@@ -256,7 +251,7 @@ public class TestMyFurniture {
     public static double totalPaid(MyFurniture object1, MyFurniture object2) {
         return object1.getDiscount() + object2.getDiscount();
     }
-    /** A method for displaying the discount of the two MyFurniture Object */
+    /** A method for displaying the discount of the two project.MyFurniture Object */
     public static void displayMyFurnitureObject(MyFurniture object) {
         System.out.printf("Total Price After Discount Is RM %.2f ",
                 object.getDiscount() );
@@ -320,11 +315,11 @@ public class TestMyFurniture {
         return b;
     }
     //End Furniture Menu
-//To Display Membership Menu
+//To Display project.Membership Menu
     public static int displayMenu1(){
         Scanner selection = new Scanner(System.in);
         System.out.println("==========================");
-        System.out.println("GA Sofa Membership Details");
+        System.out.println("GA Sofa project.Membership Details");
         System.out.println("==========================");
         System.out.println("1 - Add New Member");
         System.out.println("2 - Remove Member");
@@ -369,14 +364,13 @@ public class TestMyFurniture {
             System.out.println("Error");
         return b;
     }
-    //End Of Membership Menu
+    //End Of project.Membership Menu
 //Display Table For Furniture Type Menu
     public static void displayTable(){
 
         System.out.println("===========================================================");
         String format = "%1$-15s%2$-25s%3$-10s\n";
-        System.out.format(format, "Furniture's Name", "Furniture's Color", "Furniture
-                Price");
+        System.out.format(format, "Furniture's Name", "Furniture's Color", "Furniture Price");
 
                 System.out.println("===========================================================");
     }
@@ -385,8 +379,7 @@ public class TestMyFurniture {
 
         System.out.println("===========================================================");
         String format = "%1$-15s%2$-25s%3$-10s\n";
-        System.out.format(format, "Member's Name", "Member's Birthday", "Member's
-                Fee");
+        System.out.format(format, "Member's Name", "Member's Birthday", "Member's Fee");
 
                 System.out.println("===========================================================");
     }
@@ -420,7 +413,7 @@ public class TestMyFurniture {
         System.out.println();
         return mem2;
     }
-    //To Add New Membership
+    //To Add New project.Membership
     private static Membership input1() {
         Scanner input = new Scanner(System.in);
         System.out.println("********************** *********************");
@@ -437,7 +430,7 @@ public class TestMyFurniture {
         System.out.println();
         return sh;
     }
-    //To Add New Membership To Specific Index
+    //To Add New project.Membership To Specific Index
     private static Membership option5() {
         Scanner index = new Scanner(System.in);
         System.out.print("Enter Member's name :");

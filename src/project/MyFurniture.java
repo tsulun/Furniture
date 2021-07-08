@@ -1,4 +1,7 @@
+package project;
+
 import java.text.DecimalFormat;
+
 
 public abstract class MyFurniture {
 
@@ -18,7 +21,7 @@ public abstract class MyFurniture {
    * @return
    * @param type
    * @param c
-   * @param  numOfType
+   * @param numOfType
    */
 
    protected MyFurniture(String type, String c){
